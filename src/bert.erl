@@ -18,7 +18,7 @@
 -spec encode(term()) -> binary().
 
 encode(Term) ->
-  term_to_binary(encode_term(Term)).
+  term_to_binary(encode_term(Term),[{minor_version, 0}]).
 
 -spec decode(binary()) -> term().
 
